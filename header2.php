@@ -19,10 +19,13 @@
     <img src="maysalonprofilepicture.jpg" alt="Default Profile Picture" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);" onclick="window.location.href='profile.php';">
 <?php endif; ?>
 
-</div>        <!-- Dropdown options -->
+</div>        
+            <!-- Dropdown options -->
         <div class="dropdown-content">
             <!-- Change Profile Picture Option -->
             <a href="upload_profile.php">Change Profile Picture</a>
+            <!-- Profile -->
+            <a href="user_profile.php">My Profile</a>
             <!-- Logout Option -->
             <a href="logout.php">Logout</a>
         </div>
