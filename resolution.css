@@ -1,0 +1,6 @@
+#resolution{
+    width: 1024px; /* Set a fixed width */
+    margin: 0 auto; /* Center the container */
+    height: 768px;
+    padding: 20px; /* Add padding for space */
+  }

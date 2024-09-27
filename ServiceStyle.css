@@ -1,0 +1,289 @@
+  
+.cover-image {
+background-position: center;
+background-size: 2500px;
+height: 800px;
+background-repeat: no-repeat;
+overflow: hidden;
+}
+
+    /* Style the cover image to cover the entire container */
+.cover-image img {
+    width: 1000px;
+    height: 100vh;
+    object-fit: cover;
+   
+}
+
+        /* Style the overlay text */
+.cover-text {
+    margin: 0;
+    margin-right: -50%;
+    position: absolute;        
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+        /* Style for heading and paragraph */
+ .cover-text h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.cover-text p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.descript{
+   margin: 0;
+   font-family: "Times New Roman", Times, serif;
+   font-size: 1.5rem; 
+   text-align: center;
+}
+
+body {
+    background-color: #d8cfbc;
+    font-family: "Times New Roman", Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 2000px;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.card {
+    background: #fffbf4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 40px); /* 33.333% width minus spacing */
+    max-width: calc(33.333% - 40px); /* Ensure cards don't exceed a third of the container's width */
+    box-sizing: border-box;
+    text-align: center;
+    padding: 12px;
+    margin: 10px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 20px 0 10px;
+    font-size: 1.2em;
+}
+
+.card p {
+    color: #555;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    flex-direction: column; /* Ensures the content is stacked vertically */
+    text-align: center; /* Centers the text */
+    margin-top: 20px; /* Adds margin to the top if needed */
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 3rem !important;
+}
+
+.footer .logo{
+    color: var(--main-color);
+}
+
+.social{
+    display: flex;
+    justify-content: center; /* Centers the icons horizontally */
+    gap: 20px; /* Adds space between the icons */    
+}
+
+.social a{
+   font-size: 24px; /* Adjust icon size as needed */
+   color: inherit; /* Ensures the icons inherit the current text color */
+    
+}
+
+.social a:hover{
+    color:var(--second-color);
+}
+
+
+.copyright{
+    padding: 30px;
+    color: black;
+    text-align: center;
+}
+
+@media (max-width:1080px) {
+    .nav-container{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .home-text h1{
+        font-size: 3rem;
+    }
+    
+    .menu-content{
+        grid-template-columns: repeat(3,1fr);
+        padding: 40px;
+    }
+}
+
+@media (max-width:1080px) {
+    section{
+        padding: 2rem 0;
+    }
+    .home-text h1{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:770px){
+
+    .home{
+        min-height: 500px;
+        grid-template-columns: 1fr;
+        margin-top: 4.5rem !important;
+    }
+
+    .home-text{
+        order: 1;
+    }
+
+    .heading h2, .book-data h2{
+        font-size: 1.6rem;
+    }
+
+    .menu-content{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .book{
+        padding: 20px;
+    }
+
+    .book-data{
+        margin-top: 3rem;
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .book-data form{
+        display: grid;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .input-box{
+        border-bottom: 1px solid var(--text-alter-color);
+    }
+
+    .footer{
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media (max-width:700px){
+    header{
+        top: 15px;    
+    }
+
+    .nav{
+        padding: 14px 20px;
+    }
+    
+    .logo{
+        font-size: 1.25rem;
+    }
+
+    .menu-icon{
+        display: flex;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translate(-50%);
+        width: 90vw;
+        background: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        border-radius: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0) ;
+        transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .open-menu{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .nav-link{
+        display: block;
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width:500px) {
+    .heading h2 br{
+        display: contents;
+    }
+
+    .service-content{
+        justify-content: center;
+    }
+
+    .menu-content{
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .footer{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+@media(max-width: 380px){
+    .service-content{
+        grid-template-columns: repeat(auto-fit, minmax(auto, 140px));
+    }
+
+    .ser-box img{
+        width: 80px;
+        height: 80px;
+    }
+
+    p{
+        font-size: 0.9rem;
+    }
+
+    .heading h2, .book-datah2{
+        font-size: 1.4rem;
+    }
+}

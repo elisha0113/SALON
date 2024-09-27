@@ -1,0 +1,179 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #ffffff, #f5e3d3); /* From white to beige */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Testimonials Section */
+#testimonials {
+    width: 100%;
+    padding: 50px 0;
+}
+
+/* Center the h1 on the page */
+.testimonial-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; /* Full viewport height */
+    text-align: center;
+}
+
+/* Styling for the h1 */
+.testimonial-heading h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;  /* Adjusted margin */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+/* Decorative underline effect */
+.testimonial-heading h1::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: #f5e3d3; /* Beige underline */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Paragraph Styles */
+.testimonial-heading p {
+    font-size: 1.3rem;
+    color: #666;
+    text-align: center;
+    max-width: 700px;
+    margin: 20px auto;
+    line-height: 1.7;
+    padding: 0 20px;
+    background-color: rgba(245, 227, 211, 0.3); /* Light beige background */
+    border-left: 5px solid #f5e3d3;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+/* Add subtle animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.testimonial-heading h1, .testimonial-heading p {
+    animation: fadeIn 1s ease-in-out both;
+}
+
+/* Testimonial Box Container */
+.testimonial-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Testimonial Box */
+.testimonial-box {
+    width: 320px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #333;
+    background-color: var(--random-color); /* Random background color will be set via JS */
+}
+
+.testimonial-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.name-user strong {
+    font-size: 1.2rem;
+    color: inherit; /* Will automatically adjust based on box color */
+}
+
+/* Client Comment */
+.client-comment p {
+    font-size: 1rem;
+    color: inherit; /* Will automatically adjust based on box color */
+    word-wrap: break-word;
+}
+
+/* Smaller review date */
+.review-date {
+    font-size: 0.8rem; /* Smaller font size */
+    color: inherit;
+    opacity: 0.7;
+    text-align: right; /* Right aligned */
+    margin-top: 10px;
+}
+
+/* Footer */
+.copyright {
+    padding: 20px;
+    color: #252525;
+    text-align: center;
+}
+
+/* Random Background Colors for Review Boxes */
+:root {
+    --light-beige: #f5e3d3;
+    --dark-beige: #8c7a6b;
+    --mid-beige: #ccb9a8;
+}
+
+/* Media Queries */
+@media (max-width: 1060px) {
+    .testimonial-box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 790px) {
+    .testimonial-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 340px) {
+    .box-top {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .reviews {
+        margin-top: 10px;
+    }
+}

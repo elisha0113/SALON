@@ -1,0 +1,96 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;  /* Ensure header stays on top */
+    height: 50px; /* Define height for proper layout */
+}
+
+.header .logo {
+    font-size: 18px;
+}
+
+.header .admin-name {
+    font-size: 14px;
+}
+
+/* Container for Sidebar and Main Content */
+.container {
+    display: flex;
+    margin-top: 50px; /* Push down content to make room for the fixed header */
+    height: calc(100vh - 50px); /* Take up remaining space after header */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 50px; /* Aligned with header height */
+    left: 0;
+    width: 200px;
+    height: calc(100vh - 50px); /* Fill full height, minus header */
+    background-color: #f4f4f4;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 9; /* Sidebar stays under the header */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+.sidebar ul li a.active, .sidebar ul li a:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+.logout {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.logout a {
+    text-decoration: none;
+    color: #f00;
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 210px; /* Space for the fixed sidebar */
+    padding: 20px;
+    width: calc(100% - 210px); /* Make main content responsive based on sidebar width */
+    min-height: calc(100vh - 50px); /* Ensures the main content fills remaining space */
+    overflow-y: auto; /* Allows scrolling in case content overflows */
+}
